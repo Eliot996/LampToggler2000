@@ -32,12 +32,7 @@ public class LampToggler {
                 case 5 -> selectedLamp = lampe5;
                 default -> selectedLamp = new Lamp("catch");
             }
-            toggleLamp(selectedLamp);
+            selectedLamp.pushButton();
         }
-    }
-
-    // toggles the inputted lamp
-    public static void toggleLamp(Lamp obj){
-        obj.pushButton();
     }
 }
