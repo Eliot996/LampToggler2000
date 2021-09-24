@@ -24,22 +24,13 @@ public class LampToggler {
 
             // prompt for which lamp to change state, and set the selectedLamp to that lamp
             System.out.print("Hvilken lampe skal have ændret tilstand?: ");
-            switch (input.nextInt()){
-                case 1:
-                    selectedLamp = lampe1;
-                    break;
-                case 2:
-                    selectedLamp = lampe2;
-                    break;
-                case 3:
-                    selectedLamp = lampe3;
-                    break;
-                case 4:
-                    selectedLamp = lampe4;
-                    break;
-                case 5:
-                    selectedLamp = lampe5;
-                    break;
+            switch (input.nextInt()) {
+                case 1 -> selectedLamp = lampe1;
+                case 2 -> selectedLamp = lampe2;
+                case 3 -> selectedLamp = lampe3;
+                case 4 -> selectedLamp = lampe4;
+                case 5 -> selectedLamp = lampe5;
+                default -> selectedLamp = new Lamp("catch");
             }
             toggleLamp(selectedLamp);
         }
